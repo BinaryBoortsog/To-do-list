@@ -1,0 +1,99 @@
+body {
+    background-color: black;
+}
+
+.to-do-list {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: aliceblue;
+}
+
+button {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.add-button {
+    background-color: hsl(125, 47%, 54%);
+}
+
+.add-button:hover {
+    background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button {
+    background-color: hsl(242, 47%, 54%);
+}
+
+.delete-button:hover {
+    background-color: hsl(125, 47%, 44%);
+}
+
+.move-button {
+    background-color: hsl(274, 92%, 41%);
+}
+
+.move-button:hover {
+    background-color: hsl(125, 47%, 44%);
+}
+
+input[type="text"] {
+    font-size: 1.6rem;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    color: black;
+}
+
+ol {
+    padding: 0;
+}
+
+li {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 40px; /* Adjusted padding to make space for dot */
+    background-color: black;
+    margin-bottom: 10px;
+    border: 3px solid hsla(0, 0%, 85%, 0.75);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Required for absolute positioning of dot */
+}
+
+.text {
+    flex: 1;
+    color: aliceblue;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.not-urgent::before {
+    background-color: green; /* Green dot for non-urgent tasks */
+}
+
+.urgent::before {
+    background-color: red; /* Red dot for urgent tasks */
+}
